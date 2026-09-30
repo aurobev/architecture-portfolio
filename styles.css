@@ -1,5 +1,5 @@
 :root {
-  --bg: #faece5;
+  --bg: #ffffff;
   --surface: #f1dbd4;
   --line: #d6afaa;
   --muted: #795b52;
@@ -57,17 +57,22 @@ img { display: block; max-width: 100%; }
 }
 
 .menu-icon,
-.menu-icon::before {
+.menu-icon::before,
+.menu-icon::after {
   display: block;
   width: 20px;
   height: 1.5px;
   background: currentColor;
-  transition: transform 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
 }
 .menu-icon { position: relative; }
-.menu-icon::before { content: ""; position: absolute; top: 6px; }
-.menu-toggle[aria-expanded="true"] .menu-icon { transform: translateY(3px) rotate(45deg); }
-.menu-toggle[aria-expanded="true"] .menu-icon::before { transform: translateY(-6px) rotate(-90deg); }
+.menu-icon::before,
+.menu-icon::after { content: ""; position: absolute; left: 0; }
+.menu-icon::before { top: -6px; }
+.menu-icon::after { top: 6px; }
+.menu-toggle[aria-expanded="true"] .menu-icon { background: transparent; }
+.menu-toggle[aria-expanded="true"] .menu-icon::before { transform: translateY(6px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] .menu-icon::after { transform: translateY(-6px) rotate(-45deg); }
 
 .menu-list {
   position: absolute;

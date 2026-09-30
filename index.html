@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Architecture Portfolio</title>
+  <link rel="icon" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="banner">
+    <a class="logo" href="./" aria-label="Home">
+      <img src="images/logo.svg" alt="">
+    </a>
+
+    <h1 class="name">Your Name</h1>
+
+    <nav class="menu">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu-list">
+        Menu <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+      <ul id="menu-list" class="menu-list" hidden>
+        <li><a href="./">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery-wrap" aria-label="Projects">
+      <button class="gallery-arrow prev" aria-label="Scroll left">&larr;</button>
+      <div class="gallery">
+        <a class="project" href="projects/project-1.html">
+          <img src="images/projects/project-1.svg" alt="Project One">
+          <span class="project-title">Project One</span>
+        </a>
+        <a class="project" href="projects/project-2.html">
+          <img src="images/projects/project-2.svg" alt="Project Two">
+          <span class="project-title">Project Two</span>
+        </a>
+        <a class="project" href="projects/project-3.html">
+          <img src="images/projects/project-3.svg" alt="Project Three">
+          <span class="project-title">Project Three</span>
+        </a>
+        <a class="project" href="projects/project-4.html">
+          <img src="images/projects/project-4.svg" alt="Project Four">
+          <span class="project-title">Project Four</span>
+        </a>
+        <a class="project" href="projects/project-5.html">
+          <img src="images/projects/project-5.svg" alt="Project Five">
+          <span class="project-title">Project Five</span>
+        </a>
+        <a class="project" href="projects/project-6.html">
+          <img src="images/projects/project-6.svg" alt="Project Six">
+          <span class="project-title">Project Six</span>
+        </a>
+      </div>
+      <button class="gallery-arrow next" aria-label="Scroll right">&rarr;</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
